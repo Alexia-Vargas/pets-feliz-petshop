@@ -1,1 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro e Agendamento - Pets Feliz</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <h1>Pets Feliz - Petshop</h1>
+
+        <p>Seu pet feliz, saudável e bem cuidado!</p>
+
+        <p>Porto Alegre - RS</p>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="cadastro.html">Cadastro e Agendamento</a>
+            <a href="ajuda.html">Ajuda</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>Cadastro e Agendamento</h2>
+
+        <p class="text-center">
+            Preencha os dados abaixo para cadastrar o cliente,
+            o pet e realizar o agendamento.
+        </p>
+
+
+        <!-- Formulário -->
+        <form onsubmit="confirmarAgendamento(event)">
+
+            <!-- Dados do cliente -->
+            <fieldset>
+
+                <legend>Dados do Cliente</legend>
+
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome completo:</label>
+
+                    <input type="text"
+                           id="nome"
+                           name="nome"
+                           class="form-control"
+                           placeholder="Digite seu nome completo"
+                           required>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF:</label>
+
+                    <input type="text"
+                           id="cpf"
+                           name="cpf"
+                           class="form-control"
+                           placeholder="000.000.000-00"
+                           required>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço:</label>
+
+                    <input type="text"
+                           id="endereco"
+                           name="endereco"
+                           class="form-control"
+                           placeholder="Rua, número e bairro"
+                           required>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone:</label>
+
+                    <input type="tel"
+                           id="telefone"
+                           name="telefone"
+                           class="form-control"
+                           placeholder="(51) 99999-9999"
+                           required>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           class="form-control"
+                           placeholder="exemplo@email.com"
+                           required>
+                </div>
+
+
+                <p><strong>Sexo:</strong></p>
+
+                <div class="form-check">
+
+                    <input type="radio"
+                           id="feminino"
+                           name="sexo"
+                           value="Feminino"
+                           class="form-check-input"
+                           required>
+
+                    <label for="feminino"
+                           class="form-check-label">
+                        Feminino
+                    </label>
+
+                </div>
+
+
+                <div class="form-check">
+
+                    <input type="radio"
+                           id="masculino"
+                           name="sexo"
+                           value="Masculino"
+                           class="form-check-input">
+
+                    <label for="masculino"
+                           class="form-check-label">
+                        Masculino
+                    </label>
+
+                </div>
+
+
+                <div class="form-check mb-3">
+
+                    <input type="radio"
+                           id="outro"
+                           name="sexo"
+                           value="Outro"
+                           class="form-check-input">
+
+                    <label for="outro"
+                           class="form-check-label">
+                        Outro
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Dados do pet -->
+            <fieldset>
+
+                <legend>Dados do Pet</legend>
+
+                <div class="mb-3">
+
+                    <label for="nomePet"
+                           class="form-label">
+                        Nome do pet:
+                    </label>
+
+                    <input type="text"
+                           id="nomePet"
+                           name="nomePet"
+                           class="form-control"
+                           placeholder="Digite o nome do pet"
+                           required>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="raca"
+                           class="form-label">
+                        Raça:
+                    </label>
+
+                    <input type="text"
+                           id="raca"
+                           name="raca"
+                           class="form-control"
+                           placeholder="Digite a raça do pet"
+                           required>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="idade"
+                           class="form-label">
+                        Idade:
+                    </label>
+
+                    <input type="number"
+                           id="idade"
+                           name="idade"
+                           class="form-control"
+                           min="0"
+                           max="30"
+                           placeholder="Idade do pet"
+                           required>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="tipoPet"
+                           class="form-label">
+                        Tipo de pet:
+                    </label>
+
+                    <select id="tipoPet"
+                            name="tipoPet"
+                            class="form-select"
+                            required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Cachorro">
+                            Cachorro
+                        </option>
+
+                        <option value="Gato">
+                            Gato
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Serviço -->
+            <fieldset>
+
+                <legend>Escolha do Serviço</legend>
+
+                <div class="form-check">
+
+                    <input type="radio"
+                           id="banho"
+                           name="servico"
+                           value="Banho"
+                           class="form-check-input"
+                           required>
+
+                    <label for="banho"
+                           class="form-check-label">
+                        Banho - R$ 45,00
+                    </label>
+
+                </div>
+
+
+                <div class="form-check mb-3">
+
+                    <input type="radio"
+                           id="tosa"
+                           name="servico"
+                           value="Tosa"
+                           class="form-check-input">
+
+                    <label for="tosa"
+                           class="form-check-label">
+                        Tosa - R$ 60,00
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Método de atendimento -->
+            <fieldset>
+
+                <legend>Forma de Atendimento</legend>
+
+                <div class="form-check">
+
+                    <input type="radio"
+                           id="telebusca"
+                           name="atendimento"
+                           value="Tele-busca"
+                           class="form-check-input"
+                           required>
+
+                    <label for="telebusca"
+                           class="form-check-label">
+                        Tele-busca
+                    </label>
+
+                </div>
+
+
+                <div class="form-check mb-3">
+
+                    <input type="radio"
+                           id="local"
+                           name="atendimento"
+                           value="Entrega no local"
+                           class="form-check-input">
+
+                    <label for="local"
+                           class="form-check-label">
+                        Entrega do pet no local
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Agendamento -->
+            <fieldset>
+
+                <legend>Data e Horário</legend>
+
+                <div class="mb-3">
+
+                    <label for="data"
+                           class="form-label">
+                        Data do agendamento:
+                    </label>
+
+                    <input type="date"
+                           id="data"
+                           name="data"
+                           class="form-control"
+                           required>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="hora"
+                           class="form-label">
+                        Horário:
+                    </label>
+
+                    <input type="time"
+                           id="hora"
+                           name="hora"
+                           class="form-control"
+                           required>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Checkbox -->
+            <div class="form-check mb-3">
+
+                <input type="checkbox"
+                       id="termos"
+                       name="termos"
+                       class="form-check-input"
+                       required>
+
+                <label for="termos"
+                       class="form-check-label">
+                    Confirmo que os dados informados estão corretos.
+                </label>
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn btn-success">
+
+                Confirmar Agendamento
+
+            </button>
+
+            <button type="reset"
+                    class="btn btn-secondary">
+
+                Limpar
+
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+
+        <h3>Pets Feliz - Petshop</h3>
+
+        <p>Porto Alegre - RS</p>
+
+        <p>Telefone: (51) 99999-0000</p>
+
+        <p>E-mail: contato@petsfelizpetshop.example</p>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="cadastro.html">Cadastro e Agendamento</a>
+            <a href="ajuda.html">Ajuda</a>
+        </nav>
+
+        <p>
+            © 2026 Pets Feliz - Petshop.
+            Projeto acadêmico desenvolvido para fins educacionais.
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- JavaScript do projeto -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
