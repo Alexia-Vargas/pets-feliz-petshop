@@ -4,195 +4,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Produtos - Pets Feliz - Petshop</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
+    <!-- Cabeçalho -->
     <header>
 
         <h1>Pets Feliz - Petshop</h1>
-
         <p>Seu pet feliz, saudável e bem cuidado!</p>
-
         <p>Porto Alegre - RS</p>
 
+        <!-- Menu de navegação -->
         <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="cadastro.html">Cadastro e Agendamento</a>
             <a href="ajuda.html">Ajuda</a>
         </nav>
 
     </header>
 
-    <hr>
 
-    <main>
+    <main class="container">
 
         <h2>Nossos Produtos</h2>
 
-        <p>
+        <p class="text-center">
             Confira alguns dos produtos disponíveis no
             Pets Feliz - Petshop.
         </p>
 
 
+        <!-- Categoria: Alimentação -->
         <section>
 
             <h3>Alimentação</h3>
 
-            <article>
+            <div class="row">
 
-                <h4>Ração Amigo fiel para Cães</h4>
+                <div class="col-md-6">
 
-                <img src="imagens/racaocachorro.jpeg"
-                     alt="Ração Amigo fiel para cães"
-                     width="200">
+                    <article class="produto">
 
-                <p>
-                    Ração para cães adultos, desenvolvida para oferecer
-                    uma alimentação equilibrada.
-                </p>
+                        <h4>Ração para Cães</h4>
 
-                <p>
-                    <strong>Valor: R$ 89,90</strong>
-                </p>
+                        <img src="imagens/racaocachorro.jpeg"
+                             alt="Embalagem de ração para cães adultos"
+                             class="img-fluid">
 
-            </article>
+                        <p>
+                            Ração para cães adultos, desenvolvida para
+                            oferecer uma alimentação equilibrada.
+                        </p>
+
+                        <p>
+                            <strong>Valor: R$ 89,90</strong>
+                        </p>
+
+                    </article>
+
+                </div>
 
 
-            <article>
+                <div class="col-md-6">
 
-                <h4>Ração Amigo fiel para Gatos</h4>
+                    <article class="produto">
 
-                <img src="imagens/racaogato.jpeg"
-                     alt="Ração Amigo fiel para gatos"
-                     width="200">
+                        <h4>Ração para Gatos</h4>
 
-                <p>
-                    Alimento completo para gatos, contribuindo para
-                    uma alimentação adequada e saudável.
-                </p>
+                        <img src="imagens/racaogato.jpeg"
+                             alt="Embalagem de ração para gatos"
+                             class="img-fluid">
 
-                <p>
-                    <strong>Valor: R$ 74,90</strong>
-                </p>
+                        <p>
+                            Alimento completo para gatos, contribuindo
+                            para uma alimentação adequada e saudável.
+                        </p>
 
-            </article>
+                        <p>
+                            <strong>Valor: R$ 74,90</strong>
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
 
         </section>
 
 
+        <!-- Categoria: Brinquedos -->
         <section>
 
             <h3>Brinquedos</h3>
 
-            <article>
+            <div class="row">
 
-                <h4>Bola de Borracha para Cães</h4>
+                <div class="col-md-6">
 
-                <img src="imagens/bola.jpeg"
-                     alt="Bola de borracha para cães"
-                     width="200">
+                    <article class="produto">
 
-                <p>
-                    Brinquedo resistente para proporcionar diversão
-                    e estimular a atividade física dos cães.
-                </p>
+                        <h4>Bola de Borracha para Cães</h4>
 
-                <p>
-                    <strong>Valor: R$ 24,90</strong>
-                </p>
+                        <img src="imagens/bola.jpeg"
+                             alt="Bola de borracha utilizada como brinquedo para cães"
+                             class="img-fluid">
 
-            </article>
+                        <p>
+                            Brinquedo resistente para proporcionar
+                            diversão e estimular a atividade física dos cães.
+                        </p>
+
+                        <p>
+                            <strong>Valor: R$ 24,90</strong>
+                        </p>
+
+                    </article>
+
+                </div>
 
 
-            <article>
+                <div class="col-md-6">
 
-                <h4>Ratinho de Brinquedo para Gatos</h4>
+                    <article class="produto">
 
-                <img src="imagens/ratinho.jpeg"
-                     alt="Ratinho de brinquedo para gatos"
-                     width="200">
+                        <h4>Ratinho de Brinquedo para Gatos</h4>
 
-                <p>
-                    Brinquedo para estimular o instinto de caça
-                    e proporcionar entretenimento aos gatos.
-                </p>
+                        <img src="imagens/ratinho.jpeg"
+                             alt="Ratinho de brinquedo para gatos"
+                             class="img-fluid">
 
-                <p>
-                    <strong>Valor: R$ 14,90</strong>
-                </p>
+                        <p>
+                            Brinquedo para estimular o instinto de caça
+                            e proporcionar entretenimento aos gatos.
+                        </p>
 
-            </article>
+                        <p>
+                            <strong>Valor: R$ 14,90</strong>
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
 
         </section>
 
 
+        <!-- Categoria: Higiene e Cuidados -->
         <section>
 
             <h3>Higiene e Cuidados</h3>
 
-            <article>
+            <div class="row">
 
-                <h4>Shampoo para Cães e Gatos</h4>
+                <div class="col-md-6">
 
-                <img src="imagens/shampoo.jpeg"
-                     alt="Shampoo para cães e gatos"
-                     width="200">
+                    <article class="produto">
 
-                <p>
-                    Produto destinado à higiene dos animais,
-                    proporcionando limpeza e cuidado com os pelos.
-                </p>
+                        <h4>Shampoo para Cães e Gatos</h4>
 
-                <p>
-                    <strong>Valor: R$ 29,90</strong>
-                </p>
+                        <img src="imagens/shampoo.jpeg"
+                             alt="Frasco de shampoo para higiene de cães e gatos"
+                             class="img-fluid">
 
-            </article>
+                        <p>
+                            Produto destinado à higiene dos animais,
+                            proporcionando limpeza e cuidado com os pelos.
+                        </p>
+
+                        <p>
+                            <strong>Valor: R$ 29,90</strong>
+                        </p>
+
+                    </article>
+
+                </div>
 
 
-            <article>
+                <div class="col-md-6">
 
-                <h4>Areia Higiênica para Gatos</h4>
+                    <article class="produto">
 
-                <img src="imagens/Areia.jpeg"
-                     alt="Areia higiênica para gatos"
-                     width="200">
+                        <h4>Areia Higiênica para Gatos</h4>
 
-                <p>
-                    Areia para utilização em caixas sanitárias,
-                    facilitando a higiene e os cuidados com os gatos.
-                </p>
+                        <img src="imagens/Areia.jpeg"
+                             alt="Pacote de areia higiênica para caixa sanitária de gatos"
+                             class="img-fluid">
 
-                <p>
-                    <strong>Valor: R$ 32,90</strong>
-                </p>
+                        <p>
+                            Areia para utilização em caixas sanitárias,
+                            facilitando a higiene e os cuidados com os gatos.
+                        </p>
 
-            </article>
+                        <p>
+                            <strong>Valor: R$ 32,90</strong>
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
 
         </section>
 
     </main>
 
-    <hr>
 
+    <!-- Rodapé -->
     <footer>
 
         <h3>Pets Feliz - Petshop</h3>
 
         <p>Porto Alegre - RS</p>
-
         <p>Telefone: (51) 99999-0000</p>
-
         <p>E-mail: contato@petsfelizpetshop.example</p>
 
         <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="cadastro.html">Cadastro e Agendamento</a>
             <a href="ajuda.html">Ajuda</a>
         </nav>
 
@@ -202,6 +248,14 @@
         </p>
 
     </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- JavaScript do projeto -->
+    <script src="js/script.js"></script>
 
 </body>
 
